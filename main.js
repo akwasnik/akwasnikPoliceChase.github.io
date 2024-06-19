@@ -68,7 +68,7 @@ function game(){
             context.fillStyle='white';
             const score = Date.now()-startTimer
             context.fillText(`Score : ${score}`,300,20);
-            police.chase(player.x,player.y,2)
+            police.chase(player.x,player.y,0.5);
             if(getDistance(police.x,police.y,player.x,player.y) <= player.radius*2) {
                 clearInterval(chasing);
                 function out(){
@@ -76,14 +76,14 @@ function game(){
                     context.font = "70px Arial";
                     context.fillStyle='white';
                     context.fillText(`Score : ${score}`,290,300);
-                    requestAnimationFrame(() => out())
+                    requestAnimationFrame(() => out());
                 }
                 out()
                 setTimeout(() => {
                     window.location.reload();
                 }, 5000);
             }else{
-                requestAnimationFrame(() => chasePlayer(player.x,player.y,2))
+                requestAnimationFrame(() => chasePlayer(player.x,player.y,2));
             }
             
         }
