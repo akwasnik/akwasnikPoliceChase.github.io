@@ -1,0 +1,10 @@
+body {
+  height: 90dvh;
+  width: 90dvw;
+  margin: 2em;
+  padding: 0;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */
